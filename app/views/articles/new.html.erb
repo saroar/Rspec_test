@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center">Adding New article</h1>
+    <%= simple_form_for @article do |f| %>
+    <%= f.input :title %><br />
+    <%= f.input :body, placeholder: 'Body of Article' %>
+    <br />
+    <%= f.submit 'Create Article', :class => 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
