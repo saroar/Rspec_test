@@ -1,11 +1,21 @@
+<h1 class="text-center">Adding New article</h1>
 <div class="row">
   <div class="col-md-12">
-    <h1 class="text-center">Adding New article</h1>
     <%= simple_form_for @article do |f| %>
-    <%= f.input :title %><br />
-    <%= f.input :body, placeholder: 'Body of Article' %>
-    <br />
-    <%= f.submit 'Create Article', :class => 'btn btn-primary' %>
+      <% if @article.errors.any? %>
+        <div class="errors">
+          <h2><%= pluralize(@article.errors.count, "error") %> prevented this article from saving: </h2>
+          <ul>
+            <% @article.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end%>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :title, placeholder: 'Title of Article' %><br />
+      <%= f.input :body, placeholder: 'Body of Article' %>
+      <br />
+      <%= f.submit 'Create Article', :class => 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
