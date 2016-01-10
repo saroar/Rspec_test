@@ -19,7 +19,7 @@ RSpec.feature 'Creating Articles' do
 
     click_link 'New Article'
 
-    fill_in "Title", with: ''
+    fill_in 'Title', with: ''
     fill_in 'Body', with: ''
     click_button 'Create Article'
 
