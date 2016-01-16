@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 RSpec.feature "Users Sign-in" do
   before do
@@ -13,7 +13,7 @@ RSpec.feature "Users Sign-in" do
     fill_in "Password", with: @jon.password
     click_button "Log in"
 
-    expect(page).to have_content("Signed in Successfully")
+    expect(page).to have_content("Signed in successfully")
     expect(page).to have_content("Signed in as #{@jon.email}")
   end
 end
