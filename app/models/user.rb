@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
 
   has_many :articles
+  has_many :album
+  has_many :pictures
 end
