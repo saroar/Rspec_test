@@ -2,27 +2,15 @@
 
 <h1>Listing Albums</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>User</th>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<ul class="thumbnails">
+  <% @albums.each do |album| %>
+  <li class="span3">
+    <%= link_to album_thumbnail(album), album_pictures_path(album) %>
+    
+  </li>
+  <% end %>
+</ul>
 
-  <tbody>
-    <% @albums.each do |album| %>
-      <tr>
-        <td><%= album.user %></td>
-        <td><%= album.title %></td>
-        <td><%= link_to 'Show', album %></td>
-        <td><%= link_to 'Edit', edit_album_path(album) %></td>
-        <td><%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
