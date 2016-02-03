@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'autoprefixer-rails', '~> 5.2.0'
 gem 'simple_form'
 gem 'devise', '~> 3.5', '>= 3.5.3'
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
   gem 'byebug'
