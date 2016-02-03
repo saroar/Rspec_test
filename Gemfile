@@ -15,6 +15,7 @@ gem 'autoprefixer-rails', '~> 5.2.0'
 gem 'simple_form'
 gem 'devise', '~> 3.5', '>= 3.5.3'
 gem 'activeadmin', github: 'activeadmin'
+gem 'cancan', '~> 1.6', '>= 1.6.10'
 
 group :development, :test do
   gem 'byebug'
